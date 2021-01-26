@@ -1,0 +1,504 @@
+body,html {
+    font-family: 'Cabin', sans-serif;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+#topbar {
+    background: url(../images/background.png) center center no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+h1 {
+    color: white;
+    font-style: italic;
+    font-weight: 900;
+    color: white;
+    font-size: 80px;
+    text-shadow: 5px 5px 10px rgb(0,0,0);
+}
+
+header {
+    background-color: black;
+    line-height: 30px;
+}
+
+label[for="postTrigger"] {
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    margin: 12px 0px;
+    border: none;
+    transition: 0.5s;
+}
+
+label[for="postTrigger"]:hover {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+input[type=text] {
+    height: 40px;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type=text], textarea {
+    width: 70%;
+    font-size: 18px;
+    margin: 6px 0px;
+    border: 3px solid black;
+    transition: 0.5s;
+    outline: none;
+    resize: vertical;
+}
+
+input[type=text]:focus {
+    border: 3px solid white;
+}
+
+textarea:focus {
+    border: 3px solid white;
+}
+
+#newPostBtn {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    transform: translateX(-17px);
+    transition: 0.5s;
+}
+
+#newPostBtn:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#collapse {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 0 0 50px;
+}
+
+/* TOGGLE EFFECT */
+input:checked ~ #collapse {
+    max-height: 100%;
+}
+
+#hero {
+    background-color: white;
+}
+
+#filterReset {
+    display: none;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transform: translateX(-800px) translateY(10px);
+}
+
+#filterReset:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.post {
+    position: relative;
+    color: white;
+    background-color: black;
+    margin: 20px 10px 20px 20px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgb(0,0,0);
+}
+
+h2 {
+    font-size: 35px;
+    word-wrap: break-word;
+    padding: 0px 0px 20px 5px;
+    margin: 0px;
+}
+
+.postText{
+    display: block;
+    word-wrap: break-word;
+    width: 100%;
+    font-size: 25px;
+    padding: 0px 0px 20px 5px;
+}
+
+.postTags{
+    font-style: italic;
+    word-wrap: break-word;
+    padding: 5px;
+    margin: 0px;
+}
+
+.postTitleEdit {
+    display: block;
+    margin: 0px;
+    width: 100%;
+    font-size: 25px;
+    padding: 0px 0px 20px 5px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    transition: 0.7s;
+}
+
+.postTextEdit {
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    padding: 0px 0px 20px 5px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    transition: 0.7s;
+}
+
+.postTagsEdit {
+    font-style: italic;
+    padding: 5px;
+    margin: 0px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    transition: 0.7s;
+}
+
+.btns a {
+    position: absolute;
+    padding: 5px;
+    bottom: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btns span {
+    position: absolute;
+    padding: 5px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.editPostBtn {
+    right: 60px;
+    height: 40px;
+}
+
+.deletePostBtn {
+    right: 10px;
+    height: 40px;
+}
+
+.updatePostBtn {
+    display: none;
+    top: 10px;
+    left: 10px;
+    height: 40px;
+}
+
+.likePostBtn {
+    top: 10px;
+    right: 100px;
+    height: 40px;
+}
+
+.likeCounter {
+    right: 140px;
+}
+
+.dislikePostBtn {
+    top: 10px;
+    right: 10px;
+    height: 40px;
+}
+
+.dislikeCounter {
+    right: 50px;
+}
+
+.coments ul {
+    list-style: none;
+}
+
+.coments ul li {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.comentBtns {
+    margin-bottom: 15px;
+}
+
+.comentBtns a {
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.comentBtns span {
+    padding: 5px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.comentEditPost {
+    position: absolute;
+    left: 150px 
+}
+
+.updateComentBtn {
+    display: none;
+}
+
+.comentTextEdit {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 0px 0px 20px 5px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    transition: 0.7s;
+}
+
+.btns a:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.comentBtns a:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.coments label{
+    color: white;
+    padding: 8px 15px;
+    margin: 12px 0px;
+    border: none;
+    transition: 0.5s;
+}
+
+.coments label:hover {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+.comentBtn {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    transform: translateY(4px);
+    transition: 0.5s;
+}
+
+.comentBtn:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#bio {
+    color: white;
+    background-color: black;
+    margin: 20px 0px 30px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgb(0,0,0);
+}
+
+#bio a {
+    color: white;
+}
+
+#sort h3 {
+    color: white;
+    background-color: black;
+    margin: 0px 5px 15px 0px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgb(0,0,0);
+}
+
+#sortBtns {
+    margin-bottom: 15px;
+    height: 40px;
+}
+
+#sort a {
+    position: absolute;
+    color: black;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#sort a :hover {
+    color:white;
+    padding: 3px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#sortDateBtn {
+    left: 120px;
+    top: 80px;
+}
+
+#sortLikeBtn {
+    left: 180px;
+    top: 80px;
+}
+
+#sortDislikeBtn {
+    left: 240px;
+    top: 80px;
+}
+
+h3 {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 5px 10px 15px rgb(0,0,0);
+}
+
+.acc-header {
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    padding: 5px;
+    box-shadow: 5px 10px 15px rgb(0,0,0);
+    cursor: pointer;
+
+}
+
+.panel:last-child .acc-header {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.acc-body {
+    margin-top: 12px;
+    height: 60px;
+}
+
+#sTitle {
+    color: white;
+    background-color: black;
+}
+
+#sTitle:focus {
+    border: 3px solid white;
+}
+
+#searchTitleBtn {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#searchTitleBtn:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#tags {
+    width: 70%;
+    font-size: 18px;
+    margin: 6px 0px;
+    color: white;
+    background-color: black;
+    border: 3px solid black;
+    outline: none;
+}
+
+#searchTagBtn {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#searchTagBtn:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.acc-body label {
+    display: block;
+    font-weight: bold;
+}
+
+.acc-body #sDateFirst, .acc-body #sDateSecond {
+    display: block;
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+
+#searchDateBtn {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#searchDateBtn:hover {
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/*ACCORDION EFFECT*/
+#accordion .acc-body{
+    display : none;
+}
+ 
+#accordion .active .acc-body {
+    display : block;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="topbar">
+        <div class="row">
+            <div class="col-md-7 text-center mx-auto">
+                <h1>Projecto</h1>
+            </div>
+        </div>
+    </div> <!-- END TOPBAR -->
+
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div id="colapseForm">
+                    <button id="filterReset"><i class="fas fa-backspace fa-3x"></i></button>
+                    <label for="postTrigger">Novo Post</label>
+                    <input type="checkbox" name="postTrigger" id="postTrigger">
+                    <div class="contentForm" id="collapse">
+                        <input type="text" id="wTitle" name="wTitle" placeholder="Título">
+                        <textarea id="wPost" name="wPost" placeholder="Escreve algo..."></textarea>
+                        <input type="text" id="wTags" name="wTags" placeholder="Tags(ex:#HTML#javascript...)">
+                        <div class="d-flex justify-content-center">
+                            <button id="newPostBtn"><i class="far fa-plus-square fa-3x"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> <!-- END HEADER -->
+    
+    <div id="hero" class="container-fluid">
+        <div class="row">
+            <div id="listOfPosts" class="col-md-9">
+
+            </div> <!--END POSTLIST-->
+
+            <div class="col-md-3 text-center">
+                <div class="row">
+                    <div id="bio" class="col-md-10">
+                        <h3>Sobre mim:</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quis porro distinctio. Veniam possimus vero, nemo ducimus incidunt velit impedit voluptate itaque magni ullam ipsum cupiditate, iusto laboriosam, autem natus!</p>
+                        <div class=" text-center">
+                            <a href="#" class="btnSocial"><i class="fab fa-facebook-f fa-2x"></i></a>
+                            <a href="#" class="btnSocial"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="#" class="btnSocial"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="#" class="btnSocial"><i class="fab fa-linkedin fa-2x"></i></a>
+                        </div>
+                    </div>  
+                </div> <!--END BIO-->
+
+                <div class="row">
+                    <div id="sort" class="col-md-10">
+                        <h3>Ordenar por:</h3>
+                        <div class=" text-center" id="sortBtns">
+                            <a class="sortBtn" id="sortDateBtn"><i class="far fa-calendar fa-2x"></i></a>
+                            <a class="sortBtn" id="sortLikeBtn"><i class="far fa-heart fa-2x"></i></a>
+                            <a class="sortBbtn" id="sortDislikeBtn"><i class="fas fa-heart-broken fa-2x"></i></a>
+                        </div>
+                    </div>  
+                </div> <!--END SORT-->
+
+               <div class="row">
+                    <div id="filter" class="col-md-10">
+                        <h3>Filtrar por:</h3>
+                        <div id="accordion">
+                            <div class="panel active">
+                                <div class="acc-header">Título</div>
+                                <div class="acc-body">
+                                    <input type="text" id="sTitle" name="sTitle" placeholder="Título">
+                                    <button id="searchTitleBtn" class="staticBtn"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acc-header">Tag</div>
+                                <div class="acc-body">
+                                    <select id="tags"></select>
+                                    <button id="searchTagBtn" class="staticBtn"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acc-header">Intervalo de Tempo</div>
+                                <div class="acc-body">
+                                    <label for="sDateFirst">1ª Data</label>
+                                    <input type="text" id="sDateFirst" name="sDateFirst" placeholder="YYYY/MM/DD">
+                                    <label for="sDateSecond">2ª Data</label>
+                                    <input type="text" id="sDateSecond" name="sDateSecond" placeholder="YYYY/MM/DD">
+                                    <button id="searchDateBtn" class="staticBtn"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                       </div> 
+                    </div> <!--END FILTER-->
+               </div>
+            </div>
+        </div>
+    </div> <!--END HERO-->
+
+    <script src="./scripts/out/main.js"></script>
+</body>
+</html>
